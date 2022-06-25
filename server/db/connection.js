@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect(`mongodb://localhost:27017/joy-games`).then(() => {
+mongoose.connect(process.env.DATABASE).then(() => {
     console.log('database connected !')
 }).catch(() => {
     console.log('database connected failed !')
