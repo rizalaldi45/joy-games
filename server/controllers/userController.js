@@ -27,6 +27,6 @@ exports.logout = async (req, res) => {
         await req.user.save()
         res.send('Logout Successfully !')
     }catch(e){
-        res.status(500).send(`Internal Server Error !  ${e} !`)
+        res.status(500).json({status: 'err', message: err})
     }
 }
